@@ -1,3 +1,4 @@
 chatgpt/
 ~$pendix.docx
 .DS_Store
+*.keras
