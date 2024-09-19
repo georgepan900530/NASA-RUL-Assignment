@@ -4,7 +4,7 @@ import argparse
 def get_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "kaggle_path", help="Path to kaggle.json file.", type=str, required=True
+        "--kaggle_path", help="Path to kaggle.json file.", type=str, required=True
     )
     parser.add_argument(
         "--username", help="Your Kaggle username.", type=str, required=True

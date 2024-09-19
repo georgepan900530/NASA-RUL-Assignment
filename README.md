@@ -49,27 +49,36 @@ Before running the code, I recommend upload the files into Google Colab for bett
 pip install torchinfo
 ```
 
-Next, to download the data directly from Kaggle and split the data into training and testing set, one can follow the following command:
+Next, to download the data directly from Kaggle, one can follow the following command:
 
 ```
 pip install --upgrade --force-reinstall --no-deps kaggle==1.5.8
 mkdir /root/.kaggle
-python get_data.py --kaggle_path <Path to kaggle.json> --username <Your Kaggle username> --key <Your Kaggle key>
+python code/get_data.py --kaggle_path <Path to kaggle.json> --username <Your Kaggle username> --key <Your Kaggle key>
 chmod 600 /root/.kaggle/kaggle.json
 kaggle datasets download behrad3d/nasa-cmaps
 mkdir train
 unzip nasa-cmaps.zip -d train
 ```
 
-To run the code of this assignment, one can simply upload the `.ipynb` file to Google Colab and run all the cells. Notice that I have connected the notebook to my own google drive for convenience. Therefore, for most of the save paths of models and configurations, one should change from my google drive path to his/her own desired paths. To change the model architecture, one can simply go to LSTM and GRU blocks and add more layers or delete layers. In addition, one can choose to run the code using CPU or GPU by changing the run type in Google Colab. The training part can be done within an hour for both of the run types.
+Now that the data is prepared, one can head to `code/config.json` and modify the configuration such as paths to the data, batch size, etc.
 
-If one would like to use the trained models that I used, he/she can find the `.keras` files in each subfolders under the `visualization` folder.
+After modifying the necessary configuration, one can run the following commands which will execute every part of this assignment:
+
+```
+cd code
+python main_rul.py
+```
+
+Note that one can change the models' names and figures' names inside `code/main_rul.py`.
+
+If one would like to use the trained models that I used, he/she can find the `.keras` files in the `checkpoints` folder.
 
 ## Repository Content
 
-For the main code, one can find it in the `code` folder. The code is in `.ipynb` format where all the processes are done in a single notebook.
+For the main code, one can find it in the `code` folder. The code is in `.py` format where all the processes are done in a single file.
 
-For the visualizations of different plots, one can find it in the `visualization` folder. Note that I have saved the plots for LSTM and GRU in different subfolders for better categorization. In addition, the predicted results of both LSTM and GRU can be found in the `predictions` folder where all the `.csv` files are stored.
+For the visualizations of different plots, one can find it in the `visualization` folder. Note that I have saved the plots for my training of LSTM and GRU in different subfolders for better categorization. However, if one runs the code directly, all the figures will be save under `visualizations` folder. One can always change the saveing paths in `code/config.json` file. In addition, the predicted results of both LSTM and GRU can be found in the `predictions` folder where all the `.csv` files are stored.
 
 The report for this assignment is created as `report_rul.pdf` in the main directory. Finally, the references are shown below. For the detail interaction with ChatGPT, one can find them in `Appendix.pdf`.
 
