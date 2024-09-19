@@ -1,11 +1,10 @@
 {
-  "data_path": "data/sample_dataset.csv",
-  "train_path": "/content/train/CMaps/train_FD001.txt",
-  "test_path": "/content/train/CMaps/test_FD001.txt",
-  "GT_path": "/content/train/CMaps/RUL_FD001.txt",
-  "save_fig_folder": "./visualizations/",
-  "save_csv_folder": "./predictions/",
-  "checkpoints_folder": "./checkpoints/",
+  "train_path": "../train/CMaps/train_FD001.txt",
+  "test_path": "../train/CMaps/test_FD001.txt",
+  "GT_path": "../train/CMaps/RUL_FD001.txt",
+  "save_fig_folder": "../visualizations/",
+  "save_csv_folder": "../predictions/",
+  "checkpoints_folder": "../checkpoints/",
   "validation_split": 0.3,
   "epochs": 100,
   "batch_size": 64
