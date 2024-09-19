@@ -45,6 +45,8 @@ In this assignment, we are asked to predict if an engine's Remaining Useful Life
 
 To run the code of this assignment, one can simply upload the `.ipynb` file to Google Colab and run all the cells. Notice that I have connected the notebook to my own google drive for convenience. Therefore, for most of the save paths of models and configurations, one should change from my google drive path to his/her own desired paths. To change the model architecture, one can simply go to LSTM and GRU blocks and add more layers or delete layers. In addition, one can choose to run the code using CPU or GPU by changing the run type in Google Colab. The training part can be done within an hour for both of the run types.
 
+If one would like to use the trained models that I used, he/she can find the `.keras` files in each subfolders under the `visualization` folder.
+
 ## Repository Content
 
 For the main code, one can find it in the `code` folder. The code is in `.ipynb` format where all the processes are done in a single notebook.
