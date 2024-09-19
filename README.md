@@ -43,6 +43,24 @@ In this assignment, we are asked to predict if an engine's Remaining Useful Life
 
 ## Usage
 
+Before running the code, I recommend upload the files into Google Colab for better compatibility. In addition, make sure to install `torchinfo` using the following command:
+
+```
+pip install torchinfo
+```
+
+Next, to download the data directly from Kaggle and split the data into training and testing set, one can follow the following command:
+
+```
+pip install --upgrade --force-reinstall --no-deps kaggle==1.5.8
+mkdir /root/.kaggle
+python get_data.py --kaggle_path <Path to kaggle.json> --username <Your Kaggle username> --key <Your Kaggle key>
+chmod 600 /root/.kaggle/kaggle.json
+kaggle datasets download behrad3d/nasa-cmaps
+mkdir train
+unzip nasa-cmaps.zip -d train
+```
+
 To run the code of this assignment, one can simply upload the `.ipynb` file to Google Colab and run all the cells. Notice that I have connected the notebook to my own google drive for convenience. Therefore, for most of the save paths of models and configurations, one should change from my google drive path to his/her own desired paths. To change the model architecture, one can simply go to LSTM and GRU blocks and add more layers or delete layers. In addition, one can choose to run the code using CPU or GPU by changing the run type in Google Colab. The training part can be done within an hour for both of the run types.
 
 If one would like to use the trained models that I used, he/she can find the `.keras` files in each subfolders under the `visualization` folder.
