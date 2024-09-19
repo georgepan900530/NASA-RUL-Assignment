@@ -37,7 +37,28 @@ For this assignment, we are using the NASA Turbofan Jet Engine Data Set from [he
   <dd> - "sensor20" : High-Pressure Turbines Cool Air Flow </dd>
   <dd> - "sensor21" : Low-Pressure Turbines Cool Air Flow </dd>
 
-## Feature Selection
+## Task
+
+In this assignment, we are asked to predict if an engine's Remaining Useful Life (RUL) will fall within a certain number of cycles. Essentially, it is a binary classification task where 1 indicates the RUL of an engine is smaller than and equal to 30, and 0 indicates the RUL of an engine is larger than 30. With this in mind, we are using LSTM and GRU as our primary models to predict the output. Eventually, we will compare the performance of these two models and discuss the results.
+
+## Usage
+
+To run the code of this assignment, one can simply upload the `.ipynb` file to Google Colab and run all the cells. Notice that I have connected the notebook to my own google drive for convenience. Therefore, for most of the save paths of models and configurations, one should change from my google drive path to his/her own desired paths. To change the model architecture, one can simply go to LSTM and GRU blocks and add more layers or delete layers. In addition, one can choose to run the code using CPU or GPU by changing the run type in Google Colab. The training part can be done within an hour for both of the run types.
+
+## Repository Content
+
+For the main code, one can find it in the `code` folder. The code is in `.ipynb` format where all the processes are done in a single notebook.
+
+For the visualizations of different plots, one can find it in the `visualization` folder. Note that I have saved the plots for LSTM and GRU in different subfolders for better categorization. In addition, the predicted results of both LSTM and GRU can be found in the `predictions` folder where all the `.csv` files are stored.
+
+The report for this assignment is created as `report_rul.pdf` in the main directory. Finally, the references are shown below. For the detail interaction with ChatGPT, one can find them in `Appendix.pdf`.
+
+## References
+
+- OpenAI. (2024). ChatGPT [Large language model]. Details can be found in [Appendix.pdf](Appendix.pdf).
+- Kaggle, NASA Turbofan Jet Engine Data Set ([link](https://www.kaggle.com/datasets/behrad3d/nasa-cmaps)).
+
+<!-- ## Feature Selection
 
 By printing out the dataframe, I first noticed that columns 26, 27 are all NaN values. Therefore, I first drop these two columns. In addtion, settings 1, settings2, settings 3, sensor 1, sensor 10, sensor 18 and sensor 19 have almost zero standard deviation, which indicates that they carry low information for model learning. I will drop these features as well. Finally, I will drop sensor 5, sensor 6, sensor 16 which have identical mean, minimum, and maximum values, indicating no variability.
 
@@ -134,4 +155,4 @@ However, when evaluated on the testing set, both models demonstrate the exact sa
 
 Interestingly, both models achieved a perfect recall score (1.0) on the testing set. This indicates that neither model produced any false negatives, meaning they successfully identified all positive instances in the testing set. However, this might also suggest potential overfitting since perfect recall might not always align with optimal generalization. Given that precision is relatively lower (0.786), the models might be over-predicting the positive class, which could lead to a trade-off between precision and recall.
 
-In conclusion, while GRU appears to be more efficient during training with slightly better precision and accuracy, both models perform identically in testing, implying that the choice between LSTM and GRU might depend on computational efficiency and the specific dataset in use. Further investigation into precision-recall trade-offs and the evaluation of additional metrics like the confusion matrix may help in making a final decision on model selection.
+In conclusion, while GRU appears to be more efficient during training with slightly better precision and accuracy, both models perform identically in testing, implying that the choice between LSTM and GRU might depend on computational efficiency and the specific dataset in use. Further investigation into precision-recall trade-offs and the evaluation of additional metrics like the confusion matrix may help in making a final decision on model selection. -->

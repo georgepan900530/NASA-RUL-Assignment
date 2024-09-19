@@ -1,4 +1,4 @@
 chatgpt/
-~$pendix.docx
+*.docx
 .DS_Store
 *.keras
